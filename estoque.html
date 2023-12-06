@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Título da Página</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<main class="p-3">
+
+  <div class="">
+
+    <div class="row width-100 mt-3">
+        <div class="cad_estoque_titulo">
+            <i class="fi fi-rs-box-open"></i><h3>Agenda</h3>
+            <line></line>
+        </div>  
+    </div>
+
+<!-- Filtros -->
+<section class="estoque-linha_de_comandos">
+
+    <section class="estoque-filtros">
+		<select class="form-select p-2 ps-3" aria-label="Large select example">
+			<option value="1" selected>Nome</option> 	
+			<option value="2">Quantidade</option>
+			<option value="3">Categoria</option>
+			<option value="4">Data da Compra</option>
+			<option value="5">Validade</option>
+			<option value="6">Valor da Compra</option>
+		</select>
+			<input type="text"  id="searchInput" class="estoque_filtros_input form-control" placeholder="Pesquisar..."></input>
+			<i class="fi fi-br-search"></i>
+    </section>
+
+    <section class="estoque-comandos">
+		<div class="estoque-novo-item-button form-control"">
+			<i class="fi fi-sr-add"></i>
+			<span>Novo item</span>
+		</div>
+		<div class="estoque-novo-item-button form-control">
+			<i class="fi fi-sr-add"></i>
+			<span>Saída de item</span>
+		</div>
+    </section>
+
+</section>
+
+
+	<section class="estoque-table_box">     
+			<div class="estoque-table_heading-2"></div>
+			<div class="estoque-table_heading-28" name="nome" >
+				<h6 class="estoque-table_title" >Nome</h6>
+				<div class="icone-container" data-sort="nome">
+					<i class="fi fi-sr-caret-up" name="nome_ordenar"></i>
+				</div>
+			</div>
+			<div class="estoque-table_heading-10" name="quantidade" >
+				<h6 class="estoque-table_title" >Quantidade</h6>
+				<div class="icone-container" data-sort="quantidade">
+					<i class="fi fi-sr-caret-up" name="quantidade_ordenar"></i>
+				</div>
+			</div>
+			<div class="estoque-table_heading-10" name="categoria" >
+				<h6 class="estoque-table_title" >Categoria</h6>
+				<div class="icone-container" data-sort="categoria">
+					<i class="fi fi-sr-caret-up" name="categoria_ordenar"></i>
+				</div>
+			</div>
+			<div class="estoque-table_heading-10" name="data_compra" >
+				<h6 class="estoque-table_title" >Data da Compra</h6>
+				<div class="icone-container" data-sort="data_compra">
+					<i class="fi fi-sr-caret-up" name="data_compra_ordenar"></i>
+				</div>
+			</div>
+			<div class="estoque-table_heading-10" name="validade" >
+				<h6 class="estoque-table_title">Validade</h6>
+				<div class="icone-container" data-sort="validade">
+					<i class="fi fi-sr-caret-up" name="validade_ordenar"></i>
+				</div>
+			</div>
+			<div class="estoque-table_heading-15 justify-content-center" name="valor_compra" >
+				<h6 class="estoque-table_title">Valor da Compra</h6>
+				<div class="icone-container" data-sort="valor_compra">
+					<i class="fi fi-sr-caret-up" name="valor_compra_ordenar"></i>
+				</div>
+			</div>
+			<div class="estoque-table_heading-15" name="observacao" >
+				<h6 class="estoque-table_title">Observações</h6>
+				<div class="icone-container" data-sort="observacao">
+					<i class="fi fi-sr-caret-up" name="observacao_ordenar"></i>
+				</div>
+			</div>
+	</section>
+
+
+	<section id="estoque-tables_wrapper" class="estoque-tables_wrapper">
+		<section class="estoque-table_box-unit">
+				<div class="estoque-product-row">
+					<div class="estoque-selection_box">
+						<input type="checkbox" class="form-check-input"></input>
+					</div>
+					<div class="estoque-product-name">
+						<span>Btox Organic da LePrö Cosmetics</span>
+					</div>
+					<div class="estoque-product-quantity">
+						<span>10</span>
+					</div>
+					<div class="estoque-product-category">	
+						<span>Consumível</span>
+					</div>
+					<div class="estoque-product-buydate">
+						10/10/2023
+					</div>
+					<div class="estoque-product-expiredate">
+						20/10/2023
+					</div>
+					<div class="estoque-product-buyprice">
+						3000
+					</div>
+					<div class="estoque-product-obs">
+						<span>Utilizar somente com proteção ocular.</span>
+					</div>	
+				</div>
+				<div class="estoque-product-dados-completos-box">
+				
+					<div class="estoque-full-data">
+
+					<div class="estoque-full-data-row col-xxl-12 mb-2">
+						<div class="estoque-full-data-item col-xxl-6">
+							<h5>Nome:</h5>
+							<span>Btox Organic da LePrö Cosmetics </span>
+							<div class="estoque-full-data-icons">
+								<i class="fi fi-sr-pencil"></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2">
+						<h5>Categoria:</h5>
+						<span>Consumível</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil"></i>
+							<i class="fi fi-sr-trash"></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-4" >
+						<h5>Fornecedor:</h5>
+						<span>LGA Distribuidora Estetica </span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash"></i>
+							</div>
+						</div>
+						
+					</div>	
+					
+					<div class="estoque-full-data-row col-xxl-12 mb-2">
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Quantidade:</h5>
+						<span id="quantidade">10</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil"></i>        
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Unidade de Medida:</h5>
+						<span>ml</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+					
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Lote:</h5>
+						<span>LPh122023</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Código do Produto:</h5>
+						<span>1285648IJKL</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Data da Compra:</h5>
+						<span>10/10/2023</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Validade:</h5>
+						<span>05/05/2024</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil"></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+					
+					</div>	
+					
+
+					<div class="estoque-full-data-row col-xxl-12 mb-2">
+						<div class="estoque-full-data-item col-xxl-3" >
+						<h5>Valor de Compra (un):</h5>
+						<span>R$</span><span id="valorUnidade">300,00</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-3" id="totalCompra">
+						<h5>Valor Total de Compra:</h5>
+						<span>R$</span><span id="valorTotal"></span>
+						</div>
+						<div class="estoque-full-data-item col-xxl-3" >
+						<h5>Valor de Venda (un):</h5>
+						<span>R$</span><span id="vendaUnidade">500,00</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-3">
+						<h5>Valor Total de Venda:</h5>
+						<span>R$</span><span id="vendaTotal"></span>
+						</div>
+					</div>	
+
+					<div class="estoque-full-data-row col-xxl-12">
+					
+						<div class="estoque-full-data-item col-xxl-12">
+							<h5>Observações:</h5>
+							<span>Utilizar somente com proteção ocular. </span>
+							<div class="estoque-full-data-icons">
+								<i class="fi fi-sr-pencil" ></i>
+									<i class="fi fi-sr-trash" ></i>
+								</div>
+							</div>
+						</div>		
+					</div> <!-- estoque-full-data -->
+				</div> <!-- estoque-product-dados-completos-box -->
+		</section>
+
+
+		
+		<section class="estoque-table_box-unit">
+				<div class="estoque-product-row" >
+					<div class="estoque-selection_box">
+						<input type="checkbox" class="form-check-input"></input>
+					</div>
+					<div class="estoque-product-name">
+					<span>Sabonete Ácido Salicílico</span>
+					</div>
+					<div class="estoque-product-quantity">
+					5
+					</div>
+					<div class="estoque-product-category">	
+					Descartável
+					</div>
+					<div class="estoque-product-buydate">
+					21/10/2023
+					</div>
+					<div class="estoque-product-expiredate">
+					10/09/2024
+					</div>
+					<div class="estoque-product-buyprice">
+					380
+					</div>
+					<div class="estoque-product-obs">
+					Usar somente no rosto
+					</div>	
+				</div>
+				<div class="estoque-product-dados-completos-box">
+				
+					<div class="estoque-full-data">
+
+					<div class="estoque-full-data-row col-xxl-12 mb-2">
+						<div class="estoque-full-data-item col-xxl-6" >
+							<h5>Nome:</h5>
+							<span>Sabonete Ácido Salicílico </span>
+							<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+							</div>
+							</div>
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Categoria:</h5>
+						<span>Consumível</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-4">
+						<h5>Fornecedor:</h5>
+						<span>LGA Distribuidora Estetica </span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						
+					</div>	
+					
+					<div class="estoque-full-data-row col-xxl-12 mb-2">
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Quantidade:</h5>
+						<span id="quantidade">10</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil"></i>        
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2">
+						<h5>Unidade de Medida:</h5>
+						<span>ml</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+					
+						<div class="estoque-full-data-item col-xxl-2">
+						<h5>Lote:</h5>
+						<span> LPh122023</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Código do Produto:</h5>
+						<span>1285648IJKL</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil"></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2">
+						<h5>Data da Compra:</h5>
+						<span>10/10/2023</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil"></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-2" >
+						<h5>Validade:</h5>
+						<span>05/05/2024</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil"></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+					
+					</div>	
+
+					<div class="estoque-full-data-row col-xxl-12 mb-2">
+						<div class="estoque-full-data-item col-xxl-3">
+						<h5>Valor de Compra (un):</h5>
+						<span>R$</span><span id="valorUnidade">300,00</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-3" id="totalCompra">
+						<h5>Valor Total de Compra:</h5>
+						<span>R$</span><span id="valorTotal"></span>
+						</div>
+						<div class="estoque-full-data-item col-xxl-3">
+						<h5>Valor de Venda (un):</h5>
+						<span>R$</span><span id="vendaUnidade">500,00</span>
+						<div class="estoque-full-data-icons">
+							<i class="fi fi-sr-pencil" ></i>
+								<i class="fi fi-sr-trash" ></i>
+							</div>
+						</div>
+						<div class="estoque-full-data-item col-xxl-3">
+						<h5>Valor Total de Venda:</h5>
+						<span>R$</span><span id="vendaTotal"></span>
+						</div>
+					</div>	
+
+						<div class="estoque-full-data-row col-xxl-12">
+						
+							<div class="estoque-full-data-item col-xxl-12" >
+							<h5>Observações:</h5>
+							<span>Utilizar somente com proteção ocular. </span>
+							<div class="estoque-full-data-icons">
+								<i class="fi fi-sr-pencil" ></i>
+									<i class="fi fi-sr-trash" ></i>
+								</div>
+							</div>
+
+						</div>	
+					
+					</div> <!-- estoque-full-data -->
+				</div> <!-- estoque-product-dados-completos-box -->
+		</section>
+
+		<section class="estoque-table_box-unit">
+			<div class="estoque-product-row" >
+				<div class="estoque-selection_box">
+					<input type="checkbox" class="form-check-input"></input>
+				</div>
+				<div class="estoque-product-name">
+				<span>Agulha Hipodérmica 25 x 0,70 mm</span>
+				</div>
+				<div class="estoque-product-quantity">
+				200
+				</div>
+				<div class="estoque-product-category">	
+				Descartável
+				</div>
+				<div class="estoque-product-buydate">
+				27/04/2023
+				</div>
+				<div class="estoque-product-expiredate">
+				30/12/2023
+				</div>
+				<div class="estoque-product-buyprice">
+				495
+				</div>
+				<div class="estoque-product-obs">
+				-
+				</div>	
+			</div>
+			<div class="estoque-product-dados-completos-box">
+			
+				<div class="estoque-full-data">
+
+				<div class="estoque-full-data-row col-xxl-12 mb-2">
+					<div class="estoque-full-data-item col-xxl-6" >
+						<h5>Nome:</h5>
+						<span>Agulha Hipodérmica 25 x 0,70 mm </span>
+						<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+						</div>
+						</div>
+					<div class="estoque-full-data-item col-xxl-2" >
+					<h5>Categoria:</h5>
+					<span>Consumível</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+					<div class="estoque-full-data-item col-xxl-4" >
+					<h5>Fornecedor:</h5>
+					<span>LGA Distribuidora Estetica </span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil"></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+					
+				</div>	
+				
+				<div class="estoque-full-data-row col-xxl-12 mb-2">
+					<div class="estoque-full-data-item col-xxl-2" >
+					<h5>Quantidade:</h5>
+					<span id="quantidade">10</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>        
+						</div>
+					</div>
+					<div class="estoque-full-data-item col-xxl-2" >
+					<h5>Unidade de Medida:</h5>
+					<span>ml</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+				
+					<div class="estoque-full-data-item col-xxl-2">
+					<h5>Lote:</h5>
+					<span> LPh122023</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+					<div class="estoque-full-data-item col-xxl-2" o>
+					<h5>Código do Produto:</h5>
+					<span>1285648IJKL</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil"></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+					<div class="estoque-full-data-item col-xxl-2" >
+					<h5>Data da Compra:</h5>
+					<span>10/10/2023</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+					<div class="estoque-full-data-item col-xxl-2">
+					<h5>Validade:</h5>
+					<span>05/05/2024</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash"></i>
+						</div>
+					</div>
+				
+				</div>	
+
+				<div class="estoque-full-data-row col-xxl-12 mb-2">
+					<div class="estoque-full-data-item col-xxl-3" >
+					<h5>Valor de Compra (un):</h5>
+					<span>R$</span><span id="valorUnidade">300,00</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+					<div class="estoque-full-data-item col-xxl-3" id="totalCompra">
+					<h5>Valor Total de Compra:</h5>
+					<span>R$</span><span id="valorTotal"></span>
+					</div>
+					<div class="estoque-full-data-item col-xxl-3" >
+					<h5>Valor de Venda (un):</h5>
+					<span>R$</span><span id="vendaUnidade">500,00</span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+					<div class="estoque-full-data-item col-xxl-3">
+					<h5>Valor Total de Venda:</h5>
+					<span>R$</span><span id="vendaTotal"></span>
+					</div>
+				</div>	
+
+				<div class="estoque-full-data-row col-xxl-12">
+				
+					<div class="estoque-full-data-item col-xxl-12" >
+					<h5>Observações:</h5>
+					<span>Utilizar somente com proteção ocular. </span>
+					<div class="estoque-full-data-icons">
+						<i class="fi fi-sr-pencil" ></i>
+							<i class="fi fi-sr-trash" ></i>
+						</div>
+					</div>
+
+				</div>	
+				
+				
+				</div> <!-- estoque-full-data -->
+				
+
+			</div> <!-- estoque-product-dados-completos-box -->
+		</section>
+
+	</section> <!-- table-wrapper -->
+
+
+
+		<section class="modal_estoque">
+		<div class="modal_estoque_fundo">
+			<div class="modal_estoque_box">
+			<div class="d-flex col-xxl-12 mb-3">
+				<div class="d-flex col-xxl-11 modal_estoque_title">Alteração:</div>
+				<div class="d-flex col-xxl-1 justify-content-end">
+					<i class="fi fi-br-cross-small "></i>
+				</div>	
+			</div>		
+			<div id="modal_estoque_item_title" class=" modal_estoque_item_title"></div>
+			<input type="text" id="modal_estoque_input" class="modal_estoque_input form-control"></input>
+			<div class="estoque-button mt-2">
+					<button type="button" class="btn btn-outline-primary"><i class="fi fi-sr-cloud"></i>Salvar</button>
+			</div>
+			</div>	
+		</div>
+	</section>
+
+
+
+
+
+
+	<!-- Modal Novo item -->
+	<section class="modal_estoque_novo_item">
+	<div class="modal_estoque_fundo" id="modal_estoque_fundo">
+		
+		
+		<div class="modal-estoque_cadastro">
+					
+			<div class="modal-estoque_cadastro_title">
+				<div class="modal-cadastro_titulo">
+				<i class="fi fi-sr-add"></i> 
+					<span>Novo Item </span>
+				</div>
+				<div class="modal-estoque_cadastro_title_close">
+					<i class="fi fi-br-cross-small" id="fecharModal"></i>
+				</div>
+			</div>
+
+				<div class="estoque-new_box">
+				<div class="estoque-new_input">
+				<h6>Nome do Item:</h6>
+				<input type="text" class="form-control" placeholder="Nome do Item"></input>		    
+				</div>
+			</div>
+
+			<div class="estoque-new_box">
+				<div class="estoque-new_input_15">			
+				<h6>Quantidade:</h6>
+				<input type="text" class="form-control" placeholder="Ex.: '10'"></input>		
+				</div> 
+
+				<div class="estoque-new_input_15">			
+				<h6>Unidade de Medida:</h6>
+				<input type="text" class="form-control" placeholder="Ex.: 'ml'"></input>		
+				</div>
+				<div class="estoque-new_input_15">			
+				<h6>Código do Produto:</h6>
+				<input type="text" class="form-control" placeholder="Código"></input>		
+				</div> 
+				<div class="estoque-new_input_15">			
+				<h6>Lote:</h6>
+				<input type="text" class="form-control" placeholder="Lote"></input>		
+				</div> 
+				<div class="estoque-new_input_25">			
+				<h6>Categoria:</h6>
+				<input type="text" class="form-control" placeholder="Ex.: 'Consumíveis' "></input>		
+				</div>	
+										
+			</div>
+
+			<div class="estoque-new_box">
+				<div class="estoque-new_input_25 me-2">			
+				<h6>Data da Compra:</h6>
+				<input type="date" class="form-control"></input>		
+				</div>   	
+			
+				<div class="estoque-new_input_25 me-2">			
+				<h6>Data de Validade:</h6>
+				<input type="date" class="form-control"></input>		
+				</div>  
+				<div class="estoque-new_input_25 me-2">			
+				<h6>Valor de Compra - Unitário (R$):</h6>
+				<input type="number" class="form-control" placeholder="Ex.: '10'"></input>		
+				</div> 
+				<div class="estoque-new_input_25">			
+				<h6>Valor de Venda - Unitário (R$):</h6>
+				<input type="number" class="form-control" placeholder="Ex.: '15'"></input>		
+				</div> 		   
+			</div>	
+			
+			<div class="estoque-new_box">
+				<div class="estoque-new_input_50 me-2">			
+				<h6>Fornecedor:</h6>
+				<input type="text" class="form-control" plac eholder="Nome do Fornecedor"></input>		
+				</div> 
+				<div class="estoque-new_input_50">			
+				<h6>Observações:</h6>
+				<textarea class="form-control" style="height:36px"></textarea>		
+				</div>	
+			</div>	
+			
+			<div class="estoque-button">
+					<button type="button" class="btn btn-outline-primary"><i class="fi fi-sr-cloud"></i>Salvar</button>
+			</div>
+				</div>
+			</div>
+		
+		</div><!-- Accordion-item -->
+
+	</div>
+	</section>
+
+	<!--Modal Novo item-->
+
+</main>
+
+
+	</main><!-- Estoque-main -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="style.js"></script>
+
+</body>
+</html>

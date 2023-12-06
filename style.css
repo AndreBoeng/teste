@@ -1,0 +1,540 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+	background-color: #ebebeb !important;
+
+}
+
+.bg-teste{
+	background-color: red;
+}
+
+.bg-teste2{
+	background-color: blue;
+}
+
+.fundo{
+	width:100vw;
+	height:100vh;        
+}
+
+
+
+---------------------------------------------
+
+
+
+.display{
+	display: none;
+}
+
+
+.estoque-new_box{
+	display: flex;	
+	width: 100%;
+	height: fit-content;
+	justify-content: space-between;
+}
+
+.estoque-new_box input, .estoque-new_box textarea{
+	font-size: 14px;
+	color: #7d7c7a;
+}
+
+.estoque-new_box h6{
+	font-size: 14px;
+}
+
+
+.estoque-new_input{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: fit-content;
+        margin: 1% 0;	
+}
+
+.estoque-new_input_25{
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+	height: fit-content;
+   	margin: 1% 0 1% 0;		
+}
+
+.estoque-new_input_15{
+	display: flex;
+	flex-direction: column;
+	width: 15%;
+	height: fit-content;
+   	margin: 1% 0 1% 0;		
+}
+
+.estoque-new_input_50{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: fit-content;
+   	margin: 1% 0 1% 0;		
+}
+
+.estoque-button{
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.estoque-button button{
+	color: #57d5ff !important;
+	border-color: #57d5ff !important;
+	height: 100%;
+}
+
+.estoque-button button:hover{
+	color: white !important;
+	border-color: white !important;
+	background-color:  #b5edff;
+	transition: 0.5s;
+
+}
+
+
+.estoque-button .fi{
+	margin-right: 10px !important;
+}
+
+
+.btn-outline-primary:hover i.fi-sr-cloud {
+	transition: color 0.5s;
+	color: white;
+}
+
+.estoque-container{
+	display: flex;
+	width: 100%;
+}
+
+.estoque-table_box{
+	margin-top: 1%;
+	display: flex;	
+	align-items: center;
+	width: 100%;
+}
+
+.estoque-table_title{
+	color: #f4ac86;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+
+.estoque-table_heading-2{
+	padding: 1% 0;
+	display: flex;
+	align-items: center;
+	width: 2%;
+}
+
+.estoque-table_heading-10{
+	padding: 1% 0;
+	display: flex;
+	align-items: center;
+	width: 10%;	
+	justify-content: center;
+}
+
+.estoque-table_heading-15{
+	padding: 1% 0;
+	display: flex;
+	align-items: center;
+	width: 15%;
+	justify-content: center;
+}
+
+
+.estoque-table_heading-28{
+	padding: 1% 0;
+	display: flex;
+	width: 28%;
+	align-items: center;
+}
+
+.estoque-table_box-unit{
+	display: flex;
+	flex-direction: column;
+	width: 100%;	
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.estoque-product-row{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding: 1% 0;
+	background-color: white;
+	border-radius: 7px;
+	border: 1px solid #d6d6d6;
+	cursor: pointer;
+	transition: box-shadow 0.6s, border 0.6s, background-color 0.6s;
+	z-index: 5;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.estoque-product-row:hover{
+	border: 1px solid #add4e0;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+	background-color: #b5edff;
+}
+
+
+
+.estoque-selection_box{
+	width: 2%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.estoque-product-name{
+	width: 28%;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5e5e5e;
+}
+
+.estoque-product-quantity, .estoque-product-category, .estoque-product-buydate, .estoque-product-expiredate{
+	width: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	color: #5e5e5e;
+	border-right: 1px solid #ddd;
+}
+
+
+.estoque-product-buyprice, .estoque-product-obs{
+	width: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	color: #5e5e5e;
+	
+}
+
+.estoque-product-buyprice, .estoque-product-name{
+	border-right: 1px solid #ddd;
+}
+
+.estoque-product-dados-completos-box{
+   	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s ease;
+}
+
+.estoque-product-dados-completos-box{
+	align-items: center;
+	width: 100%;		
+	background-color: white;
+	margin-bottom: 10px;
+	position: relative;
+	bottom: 10px;
+	border: 1px solid #d6d6d6;
+	border-radius: 10px;
+}
+
+.estoque-full-data{
+	width: 100%;
+	padding: 2% 1% 1% 2%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.estoque-full-data h5{
+	font-size: 14px;
+	font-weight: bold; 
+	display: flex;
+	align-items: center;
+	margin:0;
+}
+
+.estoque-full-data-row{
+	display: flex;
+	align-items: center !important;
+	width:100%;
+}
+
+.estoque-full-data-item{
+	display: flex;
+	align-items: center;
+	padding: 0.5%;
+}
+
+.estoque-full-data-item span{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+/*
+.estoque-full-data-icons{
+	display: flex;
+	margin: 0 2%;
+}
+
+.estoque-full-data-icons i{
+	padding: 0 5px;
+	position: relative;
+	left: 0; 
+	transition: opacity 0.5s ease, left 0.5s ease; 
+	color: #7d7c7a;
+}
+
+.estoque-full-data-icons i:hover{
+	color: #7d7c7a;
+	transition: opacity 0.5s ease; 
+}
+*/
+
+.estoque-full-data-icons{
+    opacity: 0;
+	position: relative;
+	left: 0;
+    transition: opacity 0.3s ease, left 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.estoque-full-data-item:hover .estoque-full-data-icons {
+	left: 15px;
+    opacity: 1;
+	transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+.estoque-full-data-icons i {
+	cursor: pointer;
+}
+
+.show-fullData{
+        max-height: 350px;	
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;    
+}
+
+.estoque-table_box .fi-sr-caret-up{
+	cursor: pointer;
+	margin-left: 10px
+	
+}
+
+.icone-container {
+        display: flex; /* para garantir que a rotação funcione corretamente */
+}
+
+.icone-rotacionado {    
+	position: relative;
+	bottom:4px;
+	transform: rotateX(-180deg);
+	transition: transform 0.3s ease, bottom 0.2s ease;
+}
+
+.icone-inicial {    
+	position: relative;
+	bottom:0px;
+	transform: rotateX(0deg);
+	transition: transform 0.3s ease, bottom 0.2s ease;
+}
+
+.modal_estoque, .modal_estoque_novo_item{
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	position: absolute;
+	top:0;
+	left:0;	
+	
+}
+
+.modal_estoque_fundo{
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal_estoque_box{
+	width: 450px;
+	height: fit-content;
+	background-color: white;
+	padding: 1% 1% 1.5%;
+	z-index: 20;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal_estoque_title{
+	font-size: 18px;
+	font-weight: 600;
+	height: fit-content;
+}
+
+.modal_estoque_box .fi-br-cross-small, .modal-estoque_cadastro_title_close .fi-br-cross-small{
+	color:rgb(255, 100, 100)!important;
+	cursor: pointer;
+	align-items: center;
+	justify-content: end;
+}
+
+
+.modal_estoque_item_title, .modal_estoque_input{
+	display: flex;
+	width: 100%;
+	margin: 3% 0;
+}
+
+
+.estoque-filtros{
+	display: flex;
+	align-items: center;
+	width: 40%;
+}
+
+.estoque_filtros_input{	
+	max-width: 350px;
+	margin-right: 10px;
+	padding: 0.75%;
+	height: 53px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.estoque_filtros_input::placeholder{
+	color: #bfbfbf !important;
+}
+
+.estoque-filtros .fi-br-search{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	margin-left: 10px;	
+}
+
+.estoque-filtros .form-select{
+	padding: 0.75%;	
+	width: 250px;	
+	margin-right: 10px;
+	height: 53px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+	cursor: pointer;
+}	
+
+.estoque-linha_de_comandos{
+	height: fit-content;
+	width: 100%;	
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2%;
+}
+
+.estoque-comandos{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	width:20%;
+	height: fit-content;
+}
+
+.estoque-novo-item-button{
+	width: 150px;
+	max-width: 150px;
+	height: 53px;
+	margin-left: 10px;
+	padding: 0.75%;
+	border-radius: 10px;	
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center;
+	background-color: white;
+	cursor: pointer;
+	color: #57d5ff !important;
+	font-style: normal !important;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.estoque-novo-item-button span{
+	margin-left: 5px;
+}
+
+.estoque-novo-item-button .fi{
+	position: relative;
+	top: 2px;
+}
+
+.modal-estoque_cadastro{
+	height: fit-content;
+	width: fit-content;
+	background-color: white;
+	padding: 2% 2% 1.5%;
+	border-radius: 15px;
+}
+
+
+
+.modal_estoque_novo_item .fi{
+	margin-right: 2%;
+	position: relative;
+	top: 2px;
+	color: #57d5ff;
+}
+
+.modal-estoque_cadastro_title{
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: fit-content;
+}
+
+.modal-estoque_cadastro_title span{
+	margin-left: 10px;
+}
+
+.modal-cadastro_titulo{
+	width:100%;
+	display: flex;
+}
+
+.cad_estoque_titulo{
+	width: 100%;
+ 	display: flex;
+	align-items: center;
+	justify-content: start;
+    	color: #f4ac86;	
+}
+
+.cad_estoque_titulo .fi{
+	margin-right: 20px;
+	margin-left: 5px;
+	font-size: 20px;	
+}
+
+.cad_estoque_titulo line{
+	width: 100%;
+	height: 1px;
+	background-color: #e2e2e2;
+	margin-left: 16px;
+}
+
